@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.build.json",
+  "compileOnSave": false,
+  "compilerOptions": {
+    "module": "es2020",
+    "jsx": "react",
+    "resolveJsonModule": true
+  }
+}

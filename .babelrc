@@ -1,0 +1,19 @@
+{
+  "presets" : ["@babel/preset-env","@babel/preset-react"],
+  "minified":false,
+  "plugins": [
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-transform-runtime",
+    ["lodash", { "id": ["lodash", "semantic-ui-react"] }]
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        "transform-react-remove-prop-types",
+        "graphql-tag",
+        ["babel-plugin-jsx-remove-data-test-id",{"attributes":["data-testid"]}]
+      ],
+      "minified":true
+    }
+  }
+}
